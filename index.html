@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cointainer-nav">
+        <h1>MY SYSTEM</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Login</a></li>
+                <li><a href="/">FAQ</a></li>
+                <li><a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required>
+                <option value="Admin-dashboard.html">Admin</option>
+                <option value="Users/Teacher.html">Teacher</option>
+                <option value="Users/Student.html">Student</option>
+                <option value="Users/Parent.html">Parent</option>
+                <option value="Users/HumanResource.html">Human Resource</option>
+                <option value="Users/Headtecher.html">Head Teacher</option>
+                <option value="Users/Finance.html">Finance</option>
+            </select><br><br>
+            
+            <input class="login-btn" type="submit" value="Login">
+        </form>
+        <a class="password-reset" href="#">Forgot Password?</a>
+    </div>
+
+    <script>
+        // Redirect to the selected role's dashboard on form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const role = document.getElementById('role').value;
+            window.location.href = role;
+        });
+    </script>
+</body>
+</html>

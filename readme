@@ -1,0 +1,8 @@
+
+#Readme
+
+
+
+
+# 1. Introduction
+This is a simple example of a web application that uses the Flask framework to create a RESTful API. The API allows users to perform CRUD (Create, Read, Update, Delete) operations on a list of items. The items are stored in a SQLite database using SQLAlchemy as the ORM (Object-Relational Mapping) tool.
